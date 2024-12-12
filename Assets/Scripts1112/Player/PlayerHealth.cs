@@ -4,22 +4,30 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
+    public float MaxHealth;
+    public float CurrentHealth;
+    public Image health;
 
-    public float health;
-    public float maxHealth;
-    public Image healthBar;
-
+    public GameManager gameManager;
+    private bool isDead;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        maxHealth = health;
-    }
+        CurrentHealth = MaxHealth;
 
-    // Update is called once per frame
+        // github test
+    }
     void Update()
     {
-        healthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);
+        health.fillAmount = Mathf.Clamp(CurrentHealth / MaxHealth, 0, 1);
+
+        if (CurrentHealth <= 0 && !isDead)
+        {
+            isDead = true;
+            gameObject.SetActive(false);
+            gameManager.GameOver();
+            Debug.Log("Dead");
+        }
     }
 }

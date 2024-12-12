@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Damage : MonoBehaviour
+public class EnemyDamage : MonoBehaviour
 {
-    public Health pHealth;
+    public PlayerHealth PHealth;
     public float damage;
-    public int Deaths;
+
 
     
     // Start is called before the first frame update
     void Start()
     {
-        //TestGithub
+        
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class Damage : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<PlayerHealth>().health -= damage;
+            other.gameObject.GetComponent<PlayerHealth>().CurrentHealth -= damage;
         }
     }
 }

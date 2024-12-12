@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class StartGame : MonoBehaviour
 {
     public string LevelName;
+   
 
-    public void LoadLevel()
+    public void PlayGame()
     {
-        SceneManager.LoadScene(LevelName);
+        SceneManager.LoadSceneAsync(1);
     }
 }

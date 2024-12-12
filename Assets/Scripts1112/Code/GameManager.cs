@@ -5,8 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
-{
-    public GameObject GameStartUI;
+{ 
     public GameObject GameOverUI;
     public GameObject Player;
 
@@ -18,16 +17,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameStartUI.activeInHierarchy)
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        else
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+
 
         if (GameOverUI.activeInHierarchy)
         {
@@ -42,10 +32,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void GameStart()
-    {
-        GameStartUI.SetActive(true);
-    }
+
     public void GameOver()
     {
         GameOverUI.SetActive(true);

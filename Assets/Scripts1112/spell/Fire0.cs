@@ -17,7 +17,7 @@ public class Fire0: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
 
         {
             anim.SetBool("Fire", true);

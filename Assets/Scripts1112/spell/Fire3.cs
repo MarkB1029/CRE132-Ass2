@@ -19,7 +19,7 @@ public class Fire3 : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown("Fire3"))
+        if (Input.GetButton("Fire3"))
 
         {
             anim.SetBool("Spiral", true);

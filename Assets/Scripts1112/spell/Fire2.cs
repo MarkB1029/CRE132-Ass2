@@ -17,7 +17,7 @@ public class Fire2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButton("Fire2"))
 
         {
             anim.SetBool("Helix", true);

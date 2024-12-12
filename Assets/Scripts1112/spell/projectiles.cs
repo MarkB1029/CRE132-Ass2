@@ -17,7 +17,8 @@ public class projectiles : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * projectileSpeed;
+        Vector3 Vector3Test = transform.right * projectileSpeed;
+        rb.velocity = Vector3Test;
 
     }
 
