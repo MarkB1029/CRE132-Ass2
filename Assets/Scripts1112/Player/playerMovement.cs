@@ -18,6 +18,7 @@ public class playerMovement : MonoBehaviour
     
     private bool isFacingRight;
     private float horizontal;
+    public BookManager BM;
 
     
 
@@ -88,17 +89,17 @@ public class playerMovement : MonoBehaviour
 
     }
     
+    
     void OnTriggerEnter2D(Collider2D other)
     {
-      if (other.gameObject.CompareTag("Pumpkin"))
-      {
+        if (other.gameObject.CompareTag("Book"))
+        {
 
-       Destroy(other.gameObject);
-      
+            Destroy(other.gameObject);
+            BM.BookCount++;
 
-      }
+        }
     }
-    
 
 
 }

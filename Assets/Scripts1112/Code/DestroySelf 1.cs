@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroySelf : MonoBehaviour
 {
-    public void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(gameObject); 
     }
